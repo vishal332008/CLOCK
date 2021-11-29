@@ -70,7 +70,20 @@ function draw(){
     text("THE CLOCK",windowWidth/2-175,windowHeight/4);
     text("DATE : " + date + month + year,windowWidth/2-250,windowHeight/3+40);
     text("TIME : " + time,windowWidth/2-225,windowHeight/2);
-  }else{
-      console.log("not working");
+  }else if(windowWidth>=640&&windowHeight>=1066&&windowWidth<=1220&&windowHeight<=940){
+    if(backgroundimage){
+        background(backgroundimage);
+    }
+    Engine.update(engine);
+
+    gettime();
+
+    textSize(35);
+    stroke(15);
+    fill("white");
+    text("THE CLOCK",75,windowHeight/4);
+    text("DATE : " + date + month + year,40,windowHeight/3+40);
+    text("TIME : " + time,55,windowHeight/2);
   }
 }   
+
